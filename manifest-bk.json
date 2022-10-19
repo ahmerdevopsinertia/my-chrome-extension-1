@@ -1,0 +1,27 @@
+{
+    "name": "My first chrome extension",
+    "version": "1.0",
+    "description": "Build an Extension!",
+    "background": {
+        "service_worker": "scripts/background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*",
+                "file://*/*"
+            ],
+            "js": [
+                "scripts.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "activeTab"
+    ],
+    "browser_action": {
+        "default_icon": "favicon.png",
+        "default_popup": "popup.html"
+    },
+    "manifest_version": 2
+}
